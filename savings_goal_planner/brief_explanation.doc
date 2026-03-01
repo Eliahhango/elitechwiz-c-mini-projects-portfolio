@@ -1,1 +1,39 @@
-{\rtf1\ansi\deff0{\fonttbl{\f0 Calibri;}{\f1 Courier New;}}\paperw11907\paperh16840\margl1440\margr1440\margt1080\margb1080\fs22 Savings Goal Planner\line \line Assignment Information\line Dar es Salaam Institute of Technology\line Civil Engineering Department\line Module: Programming Fundamentals for Technicians (GST 05117)\line Class: OD24CE-2 | Assignment Type: Group | Assignment No: 3\line Group Number: 11 | Submission Date: March 1, 2026\line \line Group Members\line 1. ABDULAZIZ MAHYORO (240121429579)\line 2. LAWRENCE MMATAMBWE (220121417491)\line 3. ELIAH HANGO (240121476067)\line 4. HUSSEIN OMARY (240121449049)\line 5. ROBERT JAMES (240121479897)\line 6. GIDEON OLANG'U (240121429421)\line 7. MOSES MFUSE (24012317533)\line 8. GLORIA DAUDI (240121453512)\line \line Brief Explanation (One-Page Summary)\line In this mini project, our group focused on a clear problem that can be solved using basic C concepts learned in class. The objective of this work is to take user input, apply program logic step by step, and produce understandable results.\line In this project (Savings Goal Planner), a mini project that estimates how many months are needed to reach a savings goal.\line \line How the Program Works\line 1. It shows a clear prompt/menu to the user.\line 2. It accepts and validates user input to avoid wrong values.\line 3. It processes data using conditions, loops, and calculations.\line 4. It prints final results in a readable format.\line \line Concepts Practiced\line - Loops\line - Arithmetic operations\line - Input validation\line \line Sample Output (short example)\line Program prompts the user for input, validates data, then displays processed results.\line \line Presentation Note\line This mini project is intentionally simple, focused, and easy to explain during presentation.}
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Times New Roman;}}
+\paperw11907\paperh16840\margl900\margr900\margt760\margb900
+{\footer\pard\qc\sl360\slmult1\sa0\f0\fs20 Page {\field{\*\fldinst PAGE}}\par}
+\pard\qc\sl360\slmult1\sa70\f0\fs30 \b PROJECT 23: SAVINGS GOAL PLANNER\b0 \par
+\pard\qc\sl360\slmult1\sa25\f0\fs22 DAR ES SALAAM INSTITUTE OF TECHNOLOGY\par
+\pard\qc\sl360\slmult1\sa25\f0\fs22 CIVIL ENGINEERING DEPARTMENT\par
+\pard\qc\sl360\slmult1\sa70\f0\fs22 Module: Programming Fundamentals for Technicians (GST 05117)\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b ASSIGNMENT INFORMATION\b0 \par
+\pard\ql\sl360\slmult1\sa20\f0\fs22 Class: OD24CE-2 | Assignment Type: Group | Assignment No: 3\par
+\pard\ql\sl360\slmult1\sa40\f0\fs22 Group Number: 11 | Submission Date: March 1, 2026\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b GROUP MEMBERS\b0 \par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 1. ABDULAZIZ MAHYORO (240121429579)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 2. LAWRENCE MMATAMBWE (220121417491)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 3. ELIAH HANGO (240121476067)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 4. HUSSEIN OMARY (240121449049)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 5. ROBERT JAMES (240121479897)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 6. GIDEON OLANG'U (240121429421)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 7. MOSES MFUSE (24012317533)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 8. GLORIA DAUDI (240121453512)\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b BRIEF EXPLANATION\b0 \par
+\pard\ql\sl360\slmult1\sa20\f0\fs22 The program was written to demonstrate clear logic, input handling, and readable output.\par
+\pard\ql\sl360\slmult1\sa40\f0\fs22 A mini project that estimates how many months are needed to reach a savings goal.\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b PROGRAM FLOW\b0 \par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab The program displays clear prompts or menu options.\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab User input is validated before processing.\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Results are displayed in a readable format.\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b CONCEPTS PRACTICED\b0 \par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Loops\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Arithmetic operations\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Input validation\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b SAMPLE OUTPUT\b0 \par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 === Savings Goal Planner ===\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Enter savings goal amount:\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Invalid goal amount.\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Enter monthly saving amount:\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Invalid monthly saving amount.\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Progress:\par
+}
