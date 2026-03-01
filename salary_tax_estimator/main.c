@@ -8,6 +8,7 @@ Submission Date: March 1, 2026
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void clearInput(void) {
     int ch;
@@ -15,7 +16,11 @@ void clearInput(void) {
     }
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     char employeeName[50];
     float baseSalary;
     float allowance;

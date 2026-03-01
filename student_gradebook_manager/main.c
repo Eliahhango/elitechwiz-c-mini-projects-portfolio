@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_STUDENTS 100
 #define SUBJECTS 3
@@ -110,7 +111,11 @@ void classSummary(const Student students[], int count) {
     printf("Lowest Student: %s (%.2f)\n", students[lowestIndex].name, students[lowestIndex].average);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Student students[MAX_STUDENTS];
     int count = 0;
     int choice;

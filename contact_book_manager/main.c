@@ -8,6 +8,7 @@ Submission Date: March 1, 2026
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 #define MAX_CONTACTS 200
 
@@ -147,7 +148,11 @@ void deleteContact(Contact contacts[], int *count) {
     printf("Contact not found.\n");
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Contact contacts[MAX_CONTACTS];
     int count = 0;
     int choice;

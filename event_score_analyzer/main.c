@@ -7,8 +7,13 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     char participantName[100];
     float score1, score2, score3;
     float total, average;

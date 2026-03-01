@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_STUDENTS 50
 
@@ -96,7 +97,11 @@ void viewReport(const Student students[], int count) {
     }
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Student students[MAX_STUDENTS];
     int count = 0;
     int choice;

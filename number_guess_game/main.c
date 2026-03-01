@@ -16,7 +16,11 @@ void clearInput(void) {
     }
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     int secret;
     int guess;
     int attempts = 0;

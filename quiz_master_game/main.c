@@ -6,6 +6,7 @@ Module Name: Programming Fundamentals for Technicians
 Submission Date: March 1, 2026
 */
 #include <stdio.h>
+#include <stdlib.h>
 
 #define QUESTION_COUNT 5
 #define MAX_ATTEMPTS 100
@@ -69,7 +70,11 @@ void showStats(const int scores[], int attempts) {
     printf("Average Score: %.2f/%d\n", (float) total / attempts, QUESTION_COUNT);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Question questions[QUESTION_COUNT] = {
         {"Which language is primarily used for system programming?", {"HTML", "C", "SQL", "CSS"}, 2},
         {"What is the output type of sizeof operator?", {"int", "float", "size_t", "char"}, 3},

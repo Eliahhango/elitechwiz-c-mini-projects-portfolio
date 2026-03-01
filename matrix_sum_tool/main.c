@@ -7,11 +7,16 @@ Submission Date: March 1, 2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define ROWS 2
 #define COLS 2
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     int a[ROWS][COLS];
     int b[ROWS][COLS];
     int sum[ROWS][COLS];

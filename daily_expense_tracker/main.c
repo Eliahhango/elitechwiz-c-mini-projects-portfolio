@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_EXPENSES 200
 
@@ -95,7 +96,11 @@ void summary(const Expense expenses[], int count) {
            expenses[maxIndex].note);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Expense expenses[MAX_EXPENSES];
     int count = 0;
     int choice;

@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define SEAT_COUNT 10
 
@@ -71,7 +72,11 @@ void cancelSeat(int seats[]) {
     }
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     int seats[SEAT_COUNT] = {0};
     int choice;
 

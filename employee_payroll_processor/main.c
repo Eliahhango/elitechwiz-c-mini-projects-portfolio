@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_EMPLOYEES 100
 
@@ -128,7 +129,11 @@ void listEmployees(const Employee employees[], int count) {
     }
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Employee employees[MAX_EMPLOYEES];
     int count = 0;
     int choice;

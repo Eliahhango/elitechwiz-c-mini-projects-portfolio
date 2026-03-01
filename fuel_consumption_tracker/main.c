@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define MAX_TRIPS 100
 
@@ -76,7 +77,11 @@ void showSummary(const Trip trips[], int count) {
     printf("Overall Efficiency: %.2f km/L\n", totalDistance / totalFuel);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Trip trips[MAX_TRIPS];
     int count = 0;
     int choice;

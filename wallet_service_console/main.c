@@ -6,6 +6,7 @@ Module Name: Programming Fundamentals for Technicians
 Submission Date: March 1, 2026
 */
 #include <stdio.h>
+#include <stdlib.h>
 
 float balance = 0.0f;
 
@@ -54,7 +55,11 @@ void checkBalance(void) {
     printf("Current balance: %.2f\n", balance);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     int choice;
 
     while (1) {

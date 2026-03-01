@@ -7,8 +7,13 @@ Submission Date: March 1, 2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     float goalAmount;
     float monthlySaving;
     float savedAmount = 0.0f;

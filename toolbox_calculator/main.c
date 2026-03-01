@@ -6,8 +6,13 @@ Module Name: Programming Fundamentals for Technicians
 Submission Date: March 1, 2026
 */
 #include <stdio.h>
+#include <stdlib.h>
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     int choice;
     float num1, num2, result;
 

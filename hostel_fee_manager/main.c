@@ -8,6 +8,7 @@ Submission Date: March 1, 2026
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_RECORDS 100
 
@@ -91,7 +92,11 @@ void listRecords(const FeeRecord records[], int count) {
     printf("Total Due Amount: %.2f\n", totalDue);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     FeeRecord records[MAX_RECORDS];
     int count = 0;
     int choice;

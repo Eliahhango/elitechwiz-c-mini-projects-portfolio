@@ -7,10 +7,15 @@ Submission Date: March 1, 2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define DAYS 7
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     float rainfall[DAYS];
     float total = 0.0f;
     float highest;

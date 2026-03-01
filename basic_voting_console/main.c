@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #define CANDIDATE_COUNT 3
 
@@ -59,7 +60,11 @@ void showResults(const int votes[], const char *candidates[]) {
     printf("Total Votes: %d\n", totalVotes);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     const char *candidates[CANDIDATE_COUNT] = {"Alice", "Brian", "Cathy"};
     int votes[CANDIDATE_COUNT] = {0};
     int choice;

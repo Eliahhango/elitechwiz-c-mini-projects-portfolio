@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_RECORDS 100
 
@@ -112,7 +113,11 @@ void showStats(const BmiRecord records[], int count) {
     printf("Lowest BMI: %.2f\n", lowest);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     BmiRecord records[MAX_RECORDS];
     int count = 0;
     int choice;

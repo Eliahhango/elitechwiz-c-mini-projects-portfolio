@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_ITEMS 100
 
@@ -161,7 +162,11 @@ void showInventory(const Item items[], int count) {
     printf("Total Inventory Value: %.2f\n", totalValue);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Item items[MAX_ITEMS];
     int count = 0;
     int choice;

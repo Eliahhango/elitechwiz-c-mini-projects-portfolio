@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_RECORDS 100
 
@@ -118,7 +119,11 @@ void printRecords(const BillRecord records[], int count) {
     printf("Total Billed Amount: %.2f\n", total);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     BillRecord records[MAX_RECORDS];
     int count = 0;
     int choice;

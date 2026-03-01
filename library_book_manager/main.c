@@ -7,6 +7,7 @@ Submission Date: March 1, 2026
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_BOOKS 100
 
@@ -139,7 +140,11 @@ void returnBook(Book books[], int count) {
     printf("Book returned successfully.\n");
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Book books[MAX_BOOKS];
     int count = 0;
     int choice;

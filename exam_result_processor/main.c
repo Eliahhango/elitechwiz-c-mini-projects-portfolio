@@ -8,6 +8,7 @@ Submission Date: March 1, 2026
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define STUDENT_COUNT 5
 
@@ -17,7 +18,11 @@ void clearInput(void) {
     }
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     char names[STUDENT_COUNT][40];
     float marks[STUDENT_COUNT];
     float total = 0.0f;

@@ -6,6 +6,7 @@ Module Name: Programming Fundamentals for Technicians
 Submission Date: March 1, 2026
 */
 #include <stdio.h>
+#include <stdlib.h>
 
 #define MAX_TICKETS 200
 
@@ -104,7 +105,11 @@ void listTickets(const Ticket tickets[], int count) {
     printf("Total Revenue: %.2f\n", totalRevenue);
 }
 
+void pauseBeforeExit(void) {
+    system("pause");
+}
 int main(void) {
+    atexit(pauseBeforeExit);
     Ticket tickets[MAX_TICKETS];
     int count = 0;
     int nextTicketNo = 1001;
