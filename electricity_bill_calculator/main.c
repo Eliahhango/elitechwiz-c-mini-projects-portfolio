@@ -48,7 +48,7 @@ float calculateCommercial(float units) {
 
 void generateBill(BillRecord records[], int *count) {
     if (*count >= MAX_RECORDS) {
-        printf("Record capacity reached.\\n");
+        printf("Record capacity reached.\n");
         return;
     }
 
@@ -56,21 +56,21 @@ void generateBill(BillRecord records[], int *count) {
 
     printf("Enter customer name: ");
     if (fgets(record->customer, sizeof(record->customer), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     record->customer[strcspn(record->customer, "\n")] = '\0';
 
     printf("Enter units consumed: ");
     if (scanf("%f", &record->units) != 1 || record->units < 0.0f) {
-        printf("Invalid units.\\n");
+        printf("Invalid units.\n");
         clearInput();
         return;
     }
 
     printf("Consumer type (R for Residential, C for Commercial): ");
     if (scanf(" %c", &record->type) != 1) {
-        printf("Invalid consumer type.\\n");
+        printf("Invalid consumer type.\n");
         clearInput();
         return;
     }
@@ -83,32 +83,32 @@ void generateBill(BillRecord records[], int *count) {
         record->bill = calculateCommercial(record->units);
         record->type = 'C';
     } else {
-        printf("Invalid consumer type.\\n");
+        printf("Invalid consumer type.\n");
         return;
     }
 
     (*count)++;
-    printf("Bill generated successfully. Amount: %.2f\\n", record->bill);
+    printf("Bill generated successfully. Amount: %.2f\n", record->bill);
 }
 
 void printRecords(const BillRecord records[], int count) {
     if (count == 0) {
-        printf("No bill records available.\\n");
+        printf("No bill records available.\n");
         return;
     }
 
     float total = 0.0f;
-    printf("\\n%-4s %-20s %-8s %-10s %-10s\\n", "No.", "Customer", "Type", "Units", "Amount");
+    printf("\n%-4s %-20s %-8s %-10s %-10s\n", "No.", "Customer", "Type", "Units", "Amount");
     for (int i = 0; i < count; i++) {
         total += records[i].bill;
-        printf("%-4d %-20s %-8c %-10.2f %-10.2f\\n",
+        printf("%-4d %-20s %-8c %-10.2f %-10.2f\n",
                i + 1,
                records[i].customer,
                records[i].type,
                records[i].units,
                records[i].bill);
     }
-    printf("Total Billed Amount: %.2f\\n", total);
+    printf("Total Billed Amount: %.2f\n", total);
 }
 
 int main(void) {
@@ -117,14 +117,14 @@ int main(void) {
     int choice;
 
     while (1) {
-        printf("\\n=== Electricity Bill Calculator ===\\n");
-        printf("1. Generate New Bill\\n");
-        printf("2. View Bill Records\\n");
-        printf("3. Exit\\n");
+        printf("\n=== Electricity Bill Calculator ===\n");
+        printf("1. Generate New Bill\n");
+        printf("2. View Bill Records\n");
+        printf("3. Exit\n");
         printf("Choose an option: ");
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid menu input.\\n");
+            printf("Invalid menu input.\n");
             clearInput();
             continue;
         }
@@ -138,10 +138,10 @@ int main(void) {
                 printRecords(records, count);
                 break;
             case 3:
-                printf("Exiting bill calculator.\\n");
+                printf("Exiting bill calculator.\n");
                 return 0;
             default:
-                printf("Invalid option.\\n");
+                printf("Invalid option.\n");
                 break;
         }
     }

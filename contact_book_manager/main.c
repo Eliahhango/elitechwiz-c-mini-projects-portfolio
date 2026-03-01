@@ -26,7 +26,7 @@ void toLowerString(const char *src, char *dst, size_t size) {
 
 void addContact(Contact contacts[], int *count) {
     if (*count >= MAX_CONTACTS) {
-        printf("Contact limit reached.\\n");
+        printf("Contact limit reached.\n");
         return;
     }
 
@@ -34,38 +34,38 @@ void addContact(Contact contacts[], int *count) {
 
     printf("Enter name: ");
     if (fgets(contact->name, sizeof(contact->name), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     contact->name[strcspn(contact->name, "\n")] = '\0';
 
     printf("Enter phone: ");
     if (fgets(contact->phone, sizeof(contact->phone), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     contact->phone[strcspn(contact->phone, "\n")] = '\0';
 
     printf("Enter email: ");
     if (fgets(contact->email, sizeof(contact->email), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     contact->email[strcspn(contact->email, "\n")] = '\0';
 
     (*count)++;
-    printf("Contact added successfully.\\n");
+    printf("Contact added successfully.\n");
 }
 
 void listContacts(const Contact contacts[], int count) {
     if (count == 0) {
-        printf("No contacts available.\\n");
+        printf("No contacts available.\n");
         return;
     }
 
-    printf("\\n%-4s %-20s %-18s %-30s\\n", "No.", "Name", "Phone", "Email");
+    printf("\n%-4s %-20s %-18s %-30s\n", "No.", "Name", "Phone", "Email");
     for (int i = 0; i < count; i++) {
-        printf("%-4d %-20s %-18s %-30s\\n",
+        printf("%-4d %-20s %-18s %-30s\n",
                i + 1,
                contacts[i].name,
                contacts[i].phone,
@@ -78,13 +78,13 @@ void searchContact(const Contact contacts[], int count) {
     char queryLower[50];
 
     if (count == 0) {
-        printf("No contacts to search.\\n");
+        printf("No contacts to search.\n");
         return;
     }
 
     printf("Enter name to search: ");
     if (fgets(query, sizeof(query), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     query[strcspn(query, "\n")] = '\0';
@@ -96,13 +96,13 @@ void searchContact(const Contact contacts[], int count) {
         toLowerString(contacts[i].name, nameLower, sizeof(nameLower));
 
         if (strstr(nameLower, queryLower) != NULL) {
-            printf("Found: %s | %s | %s\\n", contacts[i].name, contacts[i].phone, contacts[i].email);
+            printf("Found: %s | %s | %s\n", contacts[i].name, contacts[i].phone, contacts[i].email);
             found = 1;
         }
     }
 
     if (!found) {
-        printf("No matching contact found.\\n");
+        printf("No matching contact found.\n");
     }
 }
 
@@ -111,13 +111,13 @@ void deleteContact(Contact contacts[], int *count) {
     char targetLower[50];
 
     if (*count == 0) {
-        printf("No contacts to delete.\\n");
+        printf("No contacts to delete.\n");
         return;
     }
 
     printf("Enter exact name to delete: ");
     if (fgets(target, sizeof(target), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     target[strcspn(target, "\n")] = '\0';
@@ -132,12 +132,12 @@ void deleteContact(Contact contacts[], int *count) {
                 contacts[j] = contacts[j + 1];
             }
             (*count)--;
-            printf("Contact deleted successfully.\\n");
+            printf("Contact deleted successfully.\n");
             return;
         }
     }
 
-    printf("Contact not found.\\n");
+    printf("Contact not found.\n");
 }
 
 int main(void) {
@@ -146,16 +146,16 @@ int main(void) {
     int choice;
 
     while (1) {
-        printf("\\n=== Contact Book Manager ===\\n");
-        printf("1. Add Contact\\n");
-        printf("2. List Contacts\\n");
-        printf("3. Search Contact\\n");
-        printf("4. Delete Contact\\n");
-        printf("5. Exit\\n");
+        printf("\n=== Contact Book Manager ===\n");
+        printf("1. Add Contact\n");
+        printf("2. List Contacts\n");
+        printf("3. Search Contact\n");
+        printf("4. Delete Contact\n");
+        printf("5. Exit\n");
         printf("Choose an option: ");
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid menu input.\\n");
+            printf("Invalid menu input.\n");
             clearInput();
             continue;
         }
@@ -175,10 +175,10 @@ int main(void) {
                 deleteContact(contacts, &count);
                 break;
             case 5:
-                printf("Exiting contact manager.\\n");
+                printf("Exiting contact manager.\n");
                 return 0;
             default:
-                printf("Invalid option.\\n");
+                printf("Invalid option.\n");
                 break;
         }
     }

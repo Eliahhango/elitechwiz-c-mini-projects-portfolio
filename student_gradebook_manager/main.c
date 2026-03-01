@@ -27,7 +27,7 @@ char calculateGrade(float average) {
 
 void addStudent(Student students[], int *count) {
     if (*count >= MAX_STUDENTS) {
-        printf("Gradebook is full.\\n");
+        printf("Gradebook is full.\n");
         return;
     }
 
@@ -36,7 +36,7 @@ void addStudent(Student students[], int *count) {
 
     printf("Enter student name: ");
     if (fgets(s->name, sizeof(s->name), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     s->name[strcspn(s->name, "\n")] = '\0';
@@ -44,7 +44,7 @@ void addStudent(Student students[], int *count) {
     for (int i = 0; i < SUBJECTS; i++) {
         printf("Enter score %d (0-100): ", i + 1);
         if (scanf("%f", &s->scores[i]) != 1 || s->scores[i] < 0.0f || s->scores[i] > 100.0f) {
-            printf("Invalid score.\\n");
+            printf("Invalid score.\n");
             clearInput();
             return;
         }
@@ -56,18 +56,18 @@ void addStudent(Student students[], int *count) {
     s->grade = calculateGrade(s->average);
     (*count)++;
 
-    printf("Student saved successfully.\\n");
+    printf("Student saved successfully.\n");
 }
 
 void listStudents(const Student students[], int count) {
     if (count == 0) {
-        printf("No students recorded yet.\\n");
+        printf("No students recorded yet.\n");
         return;
     }
 
-    printf("\\n%-4s %-20s %-8s %-8s %-8s %-8s %-6s\\n", "No.", "Name", "Score1", "Score2", "Score3", "Average", "Grade");
+    printf("\n%-4s %-20s %-8s %-8s %-8s %-8s %-6s\n", "No.", "Name", "Score1", "Score2", "Score3", "Average", "Grade");
     for (int i = 0; i < count; i++) {
-        printf("%-4d %-20s %-8.2f %-8.2f %-8.2f %-8.2f %-6c\\n",
+        printf("%-4d %-20s %-8.2f %-8.2f %-8.2f %-8.2f %-6c\n",
                i + 1,
                students[i].name,
                students[i].scores[0],
@@ -80,7 +80,7 @@ void listStudents(const Student students[], int count) {
 
 void classSummary(const Student students[], int count) {
     if (count == 0) {
-        printf("No data available for summary.\\n");
+        printf("No data available for summary.\n");
         return;
     }
 
@@ -98,9 +98,9 @@ void classSummary(const Student students[], int count) {
         }
     }
 
-    printf("\\nClass Average: %.2f\\n", totalAverage / count);
-    printf("Top Student: %s (%.2f)\\n", students[highestIndex].name, students[highestIndex].average);
-    printf("Lowest Student: %s (%.2f)\\n", students[lowestIndex].name, students[lowestIndex].average);
+    printf("\nClass Average: %.2f\n", totalAverage / count);
+    printf("Top Student: %s (%.2f)\n", students[highestIndex].name, students[highestIndex].average);
+    printf("Lowest Student: %s (%.2f)\n", students[lowestIndex].name, students[lowestIndex].average);
 }
 
 int main(void) {
@@ -109,15 +109,15 @@ int main(void) {
     int choice;
 
     while (1) {
-        printf("\\n=== Student Gradebook Manager ===\\n");
-        printf("1. Add Student\\n");
-        printf("2. View Gradebook\\n");
-        printf("3. Class Summary\\n");
-        printf("4. Exit\\n");
+        printf("\n=== Student Gradebook Manager ===\n");
+        printf("1. Add Student\n");
+        printf("2. View Gradebook\n");
+        printf("3. Class Summary\n");
+        printf("4. Exit\n");
         printf("Choose an option: ");
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid menu input.\\n");
+            printf("Invalid menu input.\n");
             clearInput();
             continue;
         }
@@ -134,10 +134,10 @@ int main(void) {
                 classSummary(students, count);
                 break;
             case 4:
-                printf("Exiting gradebook manager.\\n");
+                printf("Exiting gradebook manager.\n");
                 return 0;
             default:
-                printf("Invalid option.\\n");
+                printf("Invalid option.\n");
                 break;
         }
     }

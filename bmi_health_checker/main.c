@@ -31,7 +31,7 @@ void bmiCategory(float bmi, char output[]) {
 
 void addRecord(BmiRecord records[], int *count) {
     if (*count >= MAX_RECORDS) {
-        printf("Record limit reached.\\n");
+        printf("Record limit reached.\n");
         return;
     }
 
@@ -39,21 +39,21 @@ void addRecord(BmiRecord records[], int *count) {
 
     printf("Enter name: ");
     if (fgets(record->name, sizeof(record->name), stdin) == NULL) {
-        printf("Input error.\\n");
+        printf("Input error.\n");
         return;
     }
     record->name[strcspn(record->name, "\n")] = '\0';
 
     printf("Enter weight in kg: ");
     if (scanf("%f", &record->weightKg) != 1 || record->weightKg <= 0.0f) {
-        printf("Invalid weight.\\n");
+        printf("Invalid weight.\n");
         clearInput();
         return;
     }
 
     printf("Enter height in meters: ");
     if (scanf("%f", &record->heightM) != 1 || record->heightM <= 0.0f) {
-        printf("Invalid height.\\n");
+        printf("Invalid height.\n");
         clearInput();
         return;
     }
@@ -63,18 +63,18 @@ void addRecord(BmiRecord records[], int *count) {
     bmiCategory(record->bmi, record->category);
     (*count)++;
 
-    printf("BMI: %.2f (%s)\\n", record->bmi, record->category);
+    printf("BMI: %.2f (%s)\n", record->bmi, record->category);
 }
 
 void listRecords(const BmiRecord records[], int count) {
     if (count == 0) {
-        printf("No BMI records found.\\n");
+        printf("No BMI records found.\n");
         return;
     }
 
-    printf("\\n%-4s %-20s %-10s %-10s %-8s %-12s\\n", "No.", "Name", "Weight", "Height", "BMI", "Category");
+    printf("\n%-4s %-20s %-10s %-10s %-8s %-12s\n", "No.", "Name", "Weight", "Height", "BMI", "Category");
     for (int i = 0; i < count; i++) {
-        printf("%-4d %-20s %-10.2f %-10.2f %-8.2f %-12s\\n",
+        printf("%-4d %-20s %-10.2f %-10.2f %-8.2f %-12s\n",
                i + 1,
                records[i].name,
                records[i].weightKg,
@@ -86,7 +86,7 @@ void listRecords(const BmiRecord records[], int count) {
 
 void showStats(const BmiRecord records[], int count) {
     if (count == 0) {
-        printf("No records available.\\n");
+        printf("No records available.\n");
         return;
     }
 
@@ -100,9 +100,9 @@ void showStats(const BmiRecord records[], int count) {
         if (records[i].bmi < lowest) lowest = records[i].bmi;
     }
 
-    printf("Average BMI: %.2f\\n", total / count);
-    printf("Highest BMI: %.2f\\n", highest);
-    printf("Lowest BMI: %.2f\\n", lowest);
+    printf("Average BMI: %.2f\n", total / count);
+    printf("Highest BMI: %.2f\n", highest);
+    printf("Lowest BMI: %.2f\n", lowest);
 }
 
 int main(void) {
@@ -111,15 +111,15 @@ int main(void) {
     int choice;
 
     while (1) {
-        printf("\\n=== BMI Health Checker ===\\n");
-        printf("1. Add BMI Record\\n");
-        printf("2. View All Records\\n");
-        printf("3. View BMI Statistics\\n");
-        printf("4. Exit\\n");
+        printf("\n=== BMI Health Checker ===\n");
+        printf("1. Add BMI Record\n");
+        printf("2. View All Records\n");
+        printf("3. View BMI Statistics\n");
+        printf("4. Exit\n");
         printf("Choose an option: ");
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid menu input.\\n");
+            printf("Invalid menu input.\n");
             clearInput();
             continue;
         }
@@ -136,10 +136,10 @@ int main(void) {
                 showStats(records, count);
                 break;
             case 4:
-                printf("Exiting BMI checker.\\n");
+                printf("Exiting BMI checker.\n");
                 return 0;
             default:
-                printf("Invalid option.\\n");
+                printf("Invalid option.\n");
                 break;
         }
     }

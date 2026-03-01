@@ -21,14 +21,14 @@ int playQuiz(const Question questions[]) {
     for (int i = 0; i < QUESTION_COUNT; i++) {
         int answer;
 
-        printf("\\nQ%d: %s\\n", i + 1, questions[i].prompt);
+        printf("\nQ%d: %s\n", i + 1, questions[i].prompt);
         for (int j = 0; j < 4; j++) {
-            printf("%d. %s\\n", j + 1, questions[i].options[j]);
+            printf("%d. %s\n", j + 1, questions[i].options[j]);
         }
         printf("Your answer: ");
 
         if (scanf("%d", &answer) != 1 || answer < 1 || answer > 4) {
-            printf("Invalid answer. Question marked incorrect.\\n");
+            printf("Invalid answer. Question marked incorrect.\n");
             clearInput();
         } else {
             clearInput();
@@ -43,7 +43,7 @@ int playQuiz(const Question questions[]) {
 
 void showStats(const int scores[], int attempts) {
     if (attempts == 0) {
-        printf("No attempts yet.\\n");
+        printf("No attempts yet.\n");
         return;
     }
 
@@ -57,9 +57,9 @@ void showStats(const int scores[], int attempts) {
         }
     }
 
-    printf("Attempts: %d\\n", attempts);
-    printf("Best Score: %d/%d\\n", best, QUESTION_COUNT);
-    printf("Average Score: %.2f/%d\\n", (float) total / attempts, QUESTION_COUNT);
+    printf("Attempts: %d\n", attempts);
+    printf("Best Score: %d/%d\n", best, QUESTION_COUNT);
+    printf("Average Score: %.2f/%d\n", (float) total / attempts, QUESTION_COUNT);
 }
 
 int main(void) {
@@ -76,14 +76,14 @@ int main(void) {
     int choice;
 
     while (1) {
-        printf("\\n=== Quiz Master Game ===\\n");
-        printf("1. Play Quiz\\n");
-        printf("2. View Score Statistics\\n");
-        printf("3. Exit\\n");
+        printf("\n=== Quiz Master Game ===\n");
+        printf("1. Play Quiz\n");
+        printf("2. View Score Statistics\n");
+        printf("3. Exit\n");
         printf("Choose an option: ");
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid menu input.\\n");
+            printf("Invalid menu input.\n");
             clearInput();
             continue;
         }
@@ -92,22 +92,22 @@ int main(void) {
         switch (choice) {
             case 1: {
                 if (attempts >= MAX_ATTEMPTS) {
-                    printf("Attempt limit reached.\\n");
+                    printf("Attempt limit reached.\n");
                     break;
                 }
                 int score = playQuiz(questions);
                 scores[attempts++] = score;
-                printf("Quiz complete. You scored %d/%d.\\n", score, QUESTION_COUNT);
+                printf("Quiz complete. You scored %d/%d.\n", score, QUESTION_COUNT);
                 break;
             }
             case 2:
                 showStats(scores, attempts);
                 break;
             case 3:
-                printf("Exiting quiz game.\\n");
+                printf("Exiting quiz game.\n");
                 return 0;
             default:
-                printf("Invalid option.\\n");
+                printf("Invalid option.\n");
                 break;
         }
     }
