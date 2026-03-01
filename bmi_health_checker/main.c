@@ -1,3 +1,10 @@
+/*
+Group Number: 11
+Class: OD24CE
+Assignment Type: Group
+Module Name: Programming Fundamentals for Technicians
+Submission Date: March 1, 2026
+*/
 #include <stdio.h>
 #include <string.h>
 
