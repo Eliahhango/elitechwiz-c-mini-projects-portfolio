@@ -1,0 +1,41 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Times New Roman;}}
+\paperw11907\paperh16840\margl900\margr900\margt760\margb900
+{\footer\pard\qc\sl360\slmult1\sa0\f0\fs20 Page {\field{\*\fldinst PAGE}}\par}
+\pard\qc\sl360\slmult1\sa70\f0\fs30 \b PROJECT 24: SHOPPING DISCOUNT SYSTEM\b0 \par
+\pard\qc\sl360\slmult1\sa25\f0\fs22 DAR ES SALAAM INSTITUTE OF TECHNOLOGY\par
+\pard\qc\sl360\slmult1\sa25\f0\fs22 CIVIL ENGINEERING DEPARTMENT\par
+\pard\qc\sl360\slmult1\sa70\f0\fs22 Module: Programming Fundamentals for Technicians (GST 05117)\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b ASSIGNMENT INFORMATION\b0 \par
+\pard\ql\sl360\slmult1\sa20\f0\fs22 Class: OD24CE-2 | Assignment Type: Group | Assignment No: 3\par
+\pard\ql\sl360\slmult1\sa40\f0\fs22 Group Number: 11 | Submission Date: March 1, 2026\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b GROUP MEMBERS\b0 \par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 1. ABDULAZIZ MAHYORO (240121429579)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 2. LAWRENCE MMATAMBWE (220121417491)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 3. ELIAH HANGO (240121476067)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 4. HUSSEIN OMARY (240121449049)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 5. ROBERT JAMES (240121479897)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 6. GIDEON OLANG'U (240121429421)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 7. MOSES MFUSE (24012317533)\par
+\pard\ql\sl360\slmult1\sa10\f0\fs22 8. GLORIA DAUDI (240121453512)\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b BRIEF EXPLANATION\b0 \par
+\pard\ql\sl360\slmult1\sa20\f0\fs22 This project presents a simple and practical implementation suitable for group presentation.\par
+\pard\ql\sl360\slmult1\sa40\f0\fs22 A mini project to calculate discount and final payable amount based on customer type.\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b PROGRAM FLOW\b0 \par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab The program displays clear prompts or menu options.\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab User input is validated before processing.\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Results are displayed in a readable format.\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b CONCEPTS PRACTICED\b0 \par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Switch statement\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Arithmetic operators\par
+\pard\ql\li620\fi-320\sl360\slmult1\sa25\f0\fs22 \'95\tab Input validation\par
+\pard\ql\sl360\slmult1\sa20\f0\fs24 \b SAMPLE OUTPUT\b0 \par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 === Shopping Discount System ===\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 1. Student Customer (10%%)\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 2. Regular Customer (5%%)\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 3. Wholesale Customer (15%%)\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Choose customer type:\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Invalid customer type.\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Enter purchase amount:\par
+\pard\ql\sl360\slmult1\sa8\f0\fs22 Invalid amount.\par
+}

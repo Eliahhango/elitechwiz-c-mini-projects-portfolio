@@ -1,0 +1,153 @@
+
+===== PAGE 1 =====
+
+DAR ES SALAAM INSTITUTE OF TECHNOLOGY (DIT) 
+PROGRAMMING FUNDAMENTALS FOR TECHNICIANS (ITT 05114) 
+C PROGRAMMING MINI-PROJECT ASSIGNMENTS – OD24CE & OD24MNE 
+ 
+General Instructions for Students 
+▪ Use standard C programming syntax. 
+▪ Write clean and well-commented code. 
+▪ Use meaningful variable and function names. 
+▪ Compile and test your program before submission. 
+▪ Submit: 
+o Brief explanation (1 page) 
+o Sample output 
+o Source code (.c file) 
+ 
+MINI PROJECT 1: Student Grade Calculator 
+Concepts Covered: 
+• Variables 
+• Data Types 
+• Operators 
+• Input/Output (scanf, printf) 
+Objective: 
+To develop a program that calculates the total, average, and grade of a student. 
+Project Description: 
+Create a C program that: 
+1. Accepts student name and three subject marks. 
+2. Calculates total and average. 
+3. Displays the student’s grade based on average. 
+Grading Criteria: 
+Average Grade 
+70 – 100 A 
+
+===== PAGE 2 =====
+
+Average Grade 
+60 – 69 B 
+50 – 59 C 
+40 – 49 D 
+Below 40 F 
+Requirements: 
+• Use float for marks and average 
+• Use arithmetic operators (+, /) 
+• Display formatted output 
+Sample Output: 
+Enter student name: John 
+Enter marks for 3 subjects: 75 68 80 
+Total = 223 
+Average = 74.33 
+Grade = A 
+ 
+MINI PROJECT 2: Simple Calculator System 
+Concepts Covered: 
+• Operators 
+• Conditional Statements (if-else, switch) 
+Objective: 
+To design a menu-driven calculator. 
+Project Description: 
+Create a calculator program that: 
+• Performs Addition 
+• Subtraction 
+• Multiplication 
+• Division 
+Functional Requirements: 
+1. Display a menu: 
+
+===== PAGE 3 =====
+
+1. Addition 
+2. Subtraction 
+3. Multiplication 
+4. Division 
+5. Exit 
+2. Allow user to select operation 
+3. Use switch statement 
+4. Handle division by zero error 
+Expected Skills: 
+• Decision making 
+• Logical operations 
+• Error handling 
+ 
+MINI PROJECT 3: Function-Based Banking System 
+Concepts Covered: 
+• Functions 
+• Variables 
+• Conditional Statements 
+Objective: 
+To implement a simple banking system using functions. 
+Functional Requirements: 
+Create functions for: 
+• Deposit() , Withdraw() and CheckBalance() 
+Program Flow: 
+1. Display banking menu 
+2. Call appropriate function 
+3. Update account balance 
+Example Functions: 
+void deposit(); 
+void withdraw(); 
+void checkBalance(); 
+ 
+
+===== PAGE 4 =====
+
+Assessment Focus: 
+• Proper function use 
+• Code modularity 
+• User interaction 
+ 
+MINI PROJECT 4: Array-Based Student Record System 
+Concepts Covered: 
+• Arrays 
+• Loops 
+• Functions (optional) 
+• Data handling 
+Objective: 
+To store and process multiple student records using arrays. 
+Program Requirements: 
+1. Store names and marks of 5 students 
+2. Calculate: 
+o Total marks 
+o Average marks 
+o Highest score 
+o Lowest score 
+3. Display all student records in tabular format 
+Sample Output: 
+Student   Marks 
+John      78 
+Mary      85 
+Ali       67 
+Sara      90 
+David     72 
+ 
+Highest Marks: 90 
+Lowest Marks: 67 
+Average Marks: 78.4 
+
+===== PAGE 5 =====
+
+NOTE: 
+Mini-Project Instructions 
+Each group is required to choose a mini-project of their choice. You may select any of the 
+suggested topics provided earlier or propose a new project idea, as long as it is relevant to 
+the course. 
+Important Guidelines: 
+• Every group must have a unique mini-project title (no two groups should choose 
+the same project). 
+• Ensure your project is well-organized and clearly presented. 
+• Include proper documentation and explanation of your work. 
+Submission Deadline: 
+All mini-projects must be submitted on Monday, 2nd March 2026. Late submissions may 
+not be accepted. 
+ 
